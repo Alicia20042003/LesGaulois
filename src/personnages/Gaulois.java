@@ -9,6 +9,19 @@ public class Gaulois {
 		this.force = force;
 	}
 	
+	public static void main(String[] args) {
+		Gaulois asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix);
+	}
+	
+	//Permet de transformer l'affichage d'une adresse : personnages.Gaulois@XXXXXXXX
+	//En l'affiche du nom de l'objet : Nom
+	//Mais si je veux absolument le nom sans ajouter toString je doit faire :
+	// System.out.println(asterix.getNom()); 
+	public String toString() {
+		return nom;
+	}
+
 	public String getNom() {
 		return nom;
 	}
@@ -20,4 +33,12 @@ public class Gaulois {
 	private String prendreParole() {
 		return ("Le gaulois " + nom + " : ");
 	}
+	
+	public void frapper(Romain romain) {
+		String nomRomain = romain.getNom();
+		System.out.println(nom + " envoie un coup dans la mâchoire de " + nomRomain);
+		int forceCoup = force / 3;
+		romain.recevoirCoup(forceCoup);
+	}
+	
 }
