@@ -7,8 +7,8 @@ import personnages.Romain;
 public class TestGaulois {
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois("Astérix", 8);
-		Gaulois obelix = new Gaulois("Obélix", 16);
+		Gaulois asterix = new Gaulois("Asterix", 8);
+		Gaulois obelix = new Gaulois("Obelix", 16);
 		Romain minus = new Romain("Minus", 6);
 		Romain brutus = new Romain("Brutus", 14);
 		Druide panoramix = new Druide("Panoramix", 2);
