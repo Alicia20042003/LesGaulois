@@ -4,6 +4,7 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+	private Village village;
 	
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -15,6 +16,10 @@ public class Gaulois {
 		System.out.println(asterix);
 	}
 	
+	public void setVillage(Village village) {
+		this.village = village;
+	}
+
 	//Permet de transformer l'affichage d'une adresse : personnages.Gaulois@XXXXXXXX
 	//En l'affiche du nom de l'objet : Nom
 	//Mais si je veux absolument le nom sans ajouter toString je doit faire :
