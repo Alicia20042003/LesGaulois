@@ -44,6 +44,12 @@ public class Gaulois {
 		this.effetPotion = forcePotion;
 	}
 	
+	public void sePresenter(Gaulois gaulois) {
+		if(gaulois == village.getChef()){
+			parler("Bonjour, je m'appelle "+getNom()+". Je suis le chef du village "+village.getNom());
+		}
+	}
+	
 	public void frapper(Romain romain) {
 		if(effetPotion == 1) {
 			String nomRomain = romain.getNom();
