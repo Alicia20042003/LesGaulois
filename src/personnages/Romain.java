@@ -1,8 +1,14 @@
 package personnages;
 
+import java.util.Iterator;
+
+import objets.Equipement;
+
 public class Romain {
 	private String nom;
 	private int force;
+	private Equipement[] equipements = new Equipement[2];
+	private int nbEquipement = 0;
 	
 	public Romain(String nom, int force) {
 		this.nom = nom;
@@ -41,8 +47,21 @@ public class Romain {
 		assert isInvariantVerified();
 	}
 	
+	public void sEquiper(Equipement equipement) {
+		if(nbEquipement == 2) {
+			System.out.println("Le soldat "+getNom()+" est deja bien protege !");
+		}
+		for (int i = 0; i < equipements.length; i++) {
+			
+		}
+	}
+	
 	public static void main(String[] args) {
 		Romain minus = new Romain("Minus", 6);
 		minus.parler("Bonjour !");
+		
+		for(Equipement equipement : Equipement.values()) {
+			System.out.println(equipement);
+		}
 	}
 }
